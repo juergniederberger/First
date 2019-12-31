@@ -1,8 +1,11 @@
-def math(m,kg):
-    bmi = kg/m**2
+def math(size, weight):
+    size = float(size.replace(",", ".").strip())
+    weight = float(weight.replace(".", ".").strip())
+    bmi = weight / size ** 2
     return bmi
 
-m = float(input("What is your size in meters? "))
-kg = float(input("What is your weight in kg? "))
-print("Dein BMI ist ", end = '')
-print(round(math(m, kg),1))
+
+size = input("What is your size in meters? ")
+weight = input("What is your weight in kg? ")
+print("Your BMI is ", end='')
+print(round(math(size, weight), 1))
